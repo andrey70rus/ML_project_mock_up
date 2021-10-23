@@ -1,0 +1,9 @@
+@startuml
+
+header ML project mock up
+
+title
+UseCase .fit_model()
+end title
+
+@enduml
