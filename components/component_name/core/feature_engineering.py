@@ -70,6 +70,11 @@ class FeatureEngineering:
 
     @abstractmethod
     def __drop_outliers(self, raw_df):
+        """
+        Drop rows with outliers based on self.config_name['outliers_info'].
+        :param raw_df (pd.DataFrame): raw data for filtering rows with outliers
+        :return filtered_raw_df: data without rows with outliers
+        """
         ...
 
     @abstractmethod
