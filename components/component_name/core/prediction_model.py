@@ -5,7 +5,7 @@ import logging
 from xgboost import XGBRegressor
 
 logging.basicConfig(level=logging.INFO)
-LOGGER = logging.getLogger('PredictionModel')
+LOGGER = logging.getLogger(__name__)
 
 
 class BaseModel (ABC):
@@ -19,15 +19,12 @@ class BaseModel (ABC):
 
         return prediction_model
 
-    @abstractmethod
-    def fit(self, model_features, target_value): ...
-
-
     def save(self, path: Path):
-        joblib.dump(path, self.model)
+        joblib.dump(self, path)
 
 
 class XGBRegressorExtended (XGBRegressor, BaseModel):
     """
         Extended class for XGBRegressor model
     """
+    pass
