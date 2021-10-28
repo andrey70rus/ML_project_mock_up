@@ -3,7 +3,6 @@ from abc import abstractmethod
 from typing import Dict, List, Optional, Union
 import pandas as pd
 
-
 logging.basicConfig(level=logging.INFO)
 LOGGER = logging.getLogger(__name__)
 
