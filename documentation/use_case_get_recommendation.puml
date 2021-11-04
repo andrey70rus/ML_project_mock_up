@@ -1,0 +1,9 @@
+@startuml
+
+header ML project mock up
+
+title
+UseCase .get_recommendation()
+end title
+
+@enduml
