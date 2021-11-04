@@ -22,8 +22,14 @@ class BaseModel (ABC):
     def save(self, path: Path):
         joblib.dump(self, path)
 
+    @abstractmethod
+    def fit(self, prepared_features, target): ...
 
-class XGBRegressorExtended (XGBRegressor, BaseModel):
+    @abstractmethod
+    def predict(self, prepared_features): ...
+
+
+class XGBRegressorExtended (XGBRegressor, BaseModel, ABC):
     """
         Extended class for XGBRegressor model
     """

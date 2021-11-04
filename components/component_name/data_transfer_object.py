@@ -6,7 +6,7 @@ logging.basicConfig(level=logging.INFO)
 LOGGER = logging.getLogger(__name__)
 
 
-class DataTransferObject:
+class DataAccessObject:
 
     @staticmethod
     def get_local_csv(path: Path, separator: str = ','):
